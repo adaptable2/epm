@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Somod Grupo EPM</title>
+    <link rel="stylesheet" href="https://www.somosgrupoepm.com/App_Themes/css/general.css?v=10">
+    <link rel="stylesheet" href="https://www.somosgrupoepm.com/App_Themes/css/responsive.css?v=3">
+    <link rel="stylesheet" href="https://www.somosgrupoepm.com/App_Themes/css/develop.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .contenido-tab{
+            display: none;
+            clear: both;
+            color: #5b5b5f;
+        }
+        .contenido-tab.abierto{
+            display: block;
+        }
+        .menu-tabs{
+          display: inline-block;
+          padding-bottom: 40px;
+        }
+        .titulo{
+          font-family: 'Roboto';
+          color: #3fb128;
+          font-weight: bold;
+          position: relative;
+          padding-bottom: 5px;
+          margin-bottom: 20px;
+        }
+        .titulo h2{
+          margin-bottom: 0;
+        }
+        .titulo:after{
+          content: "";
+          display: block;
+          width: 100%;
+          height: 3px;
+          border-radius:10px;
+          background-color: #3fb128;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        .opcion{
+            display: inline-block;
+            padding: 10px;
+            color: #a8a8a8;
+            text-decoration: none;
+            font-family: 'Roboto';
+            font-weight: bold;
+        }
+        .activo{
+          color: #3fb128;
+        }
+        .contenedor{
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 15px;
+            font-family: 'Roboto';
+        }
+        .contenido-tab:after{
+          content: "";
+          display: block;
+          clear: both;
+        }
+        .d-inline-block{
+          display: inline-block;
+        }
+        .texto-center{
+          text-align: center;
+        }
+        .contenido{
+          display: block;
+          float: left;
+          width: 30%;
+          margin: 15px 1.5%;
+          background: white;
+          border-radius: 20px;
+          font-family: 'Roboto';
+          overflow: hidden;
+          text-align: center;
+          box-shadow: 0 0 10px 0  rgba(0,0,0,0.2);
+        }
+        .contenido .header{ 
+          background-color: #3fb128;
+          color: white;
+          padding: 10px;
+          font: 20px;
+        }
+        .contenido .header h2,.contenido h2{
+          font-size: 18px;
+        }
+        .contenido h2{
+          padding-bottom: 10px;
+        }
+        .contenido .header h2{
+          margin-bottom: 0;
+          margin-top: 0;
+          padding-bottom: 0;
+        }
+        .contenido strong, .contenido b{
+          font-family: 'Roboto';
+          font-weight: bold;
+        }
+        .contenido p{
+          font-size: 10px;
+        }
+        .contenido p span{
+          display: block;
+        }
+        .cuerpo-contenido{
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .contenido strong{
+          text-transform: uppercase;
+          font-size: 11px;
+        }
+        .color-grenn{
+          color: #3fb128;
+        }
+        .text-green{
+          min-height: 100px;
+          padding: 0 0 10px;
+        }
+        .boton-terminos{
+          padding: 5px 15px;
+          display: inline-block;
+          background-color: #f5f5f5;
+          font-size: 10px;
+          border-radius: 20px;
+          color: #5b5b5f;
+          margin-bottom: 15px;
+          text-decoration: none;
+        }
+        .producto-text{
+          min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="titulo" class="titulo">
+            <h2>Ofertas especiales vigentes</h2>
+        </div>
+        <div class="texto-center">
+          <div class="menu-tabs">
+            <div class="d-inline-block">
+              <a class="opcion activo" href='#especiales'>
+                  <strong>Ofertas especiales vigentes</strong>
+              </a>
+              <a class="opcion" href='#electrodomesticos'>
+                  <strong>Electrodomésticos</strong>
+              </a>
+              <a class="opcion" href='#tecnologia'>
+                  <strong>Tecnología</strong>
+              </a>
+              <a class="opcion" href='#construccion'>
+                  <strong>Materiales para la construcción</strong>
+              </a>
+            </div>
+            <div class="d-inline-block">
+              <a class="opcion" href='#gasodomesticos'>
+                  <strong>Gasodomésticos</strong>
+              </a>
+              <a class="opcion" href='#domotico'>
+                  <strong>Domótica</strong>
+              </a>
+              <a class="opcion" href='#maquinaCoser'>
+                  <strong>Máquinas de coser</strong>
+              </a>
+              <a class="opcion" href='#movilidad'>
+                  <strong>Movilidad sostenible</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contenido-tab especiales abierto" id="especiales">
+          <!--inicio item -->
+          <div class="contenido">
+            <h2>
+              Samsung Store
+            </h2>
+            <div class="cuerpo-contenido">
+              <p class="color-grenn text-green"> 
+                <span>
+                  <strong>
+                    Hasta 41% de descuento
+                  </strong>
+                </span>
+                <span>en televisores</span>
+                <br>
+                <span>
+                  <strong>
+                    Hasta 41% de descuento
+                  </strong>
+                </span>
+                <span>en celulares</span>
+              </p>
+            </div>
+          <div class="contenido-datos">
+            <p><strong>Contacto</strong></p>
+            <p>
+              <span>
+                <b>
+                  Cel: 300 687 98 30
+                </b> 
+                Atención a Domicilio
+              </span>
+              <span>
+                <b>
+                  Tel: 
+                </b> 
+                403 73 13
+              </span>
+            </p>
+          </div>
+            <p>
+              Vigencia: hasta el 30 de mayo
+            </p>
+            <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+          </div>
+          <!--final item -->
+          <!--inicio item -->
+          <div class="contenido">
+            <h2>
+              Diseven
+            </h2>
+            <div class="cuerpo-contenido">
+              <p class="color-grenn text-green"> 
+                <span>
+                  <strong>
+                    Hasta 15% de descuento
+                  </strong>
+                </span>
+                <span>en kits y dispositivos marca Diseven</span>
+              </p>
+            </div>
+          <div class="contenido-datos">
+            <p><strong>Contacto</strong></p>
+            <p>
+              Atención a Domicilio
+              <span><b>Cel:</b> 321 879 72 89</span>
+            </p>
+          </div>
+            <p>
+              Vigencia: hasta el 31 de mayo
+            </p>
+            <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+          </div>
+          <!--final item -->
+          <!--inicio item -->
+          <div class="contenido">
+            <h2>
+              BikesToGo
+            </h2>
+            <div class="cuerpo-contenido">
+              <p class="color-grenn text-green"> 
+                <span>
+                  <strong>
+                    Hasta el 10% en bicicletas
+                  </strong>
+                </span>
+                <span>en eléctricas</span>
+              </p>
+            </div>
+          <div class="contenido-datos">
+            <p><strong>Contacto</strong></p>
+            <p>
+              Atención a Domicilio
+              <span><b>Cel:</b> 313 648 66 05 / 310 534 15 70</span>
+            </p>
+          </div>
+            <p>
+              Vigencia: hasta el 30 de mayo
+            </p>
+            <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+          </div>
+          <!--final item -->
+        </div>
+        <div class="contenido-tab" id="electrodomesticos">
+          <!--inicio item -->
+          <div class="contenido">
+            <div class="header">
+                <!--titulo-->
+              <h2>Maservinox</h2> 
+            </div>
+            <div class="cuerpo-contenido">
+              <div class="contenido-datos">
+                <p><strong>Contacto</strong></p>
+                <p>
+                  Atención a Domicilio
+                  <!--telefonos-->
+                  <span><b>Cel:</b> 316 410 88 60<span>
+                </p>
+              </div>
+              <p><strong>producto o servicio</strong></p>
+              <!--productos y servicios-->
+              <p class='producto-text'>
+                Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
+              </p>
+            </div>
+          </div>
+          <!--final item -->
+        </div>
+        <div class="contenido-tab" id="tecnologia">
+            
+        </div>
+        <div class="contenido-tab" id="construccion">
+            
+        </div>
+        <div class="contenido-tab" id="gasodomesticos">
+            
+        </div>
+        <div class="contenido-tab" id="domotico">
+            
+        </div>
+        <div class="contenido-tab" id="maquinaCoser">
+            
+        </div>
+        <div class="contenido-tab" id="movilidad">
+            
+        </div>
+    </div>
+</body>
+<script src="https://www.somosgrupoepm.com/App_Themes/js/jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.opcion').on('click',function(){
+    let href = $(this).attr('href');
+    let titulo = $(this).text();
+    $('.opcion').removeClass('activo');  
+    $(this).addClass('activo');  
+    $('.contenido-tab').removeClass('abierto');
+    $(href).addClass('abierto');
+    $('#titulo h2').html(titulo)
+    especiales();
+  });
+  function altotext(){
+    let altoprev = 0;
+    let items = $('.abierto .contenido').length - 1;
+    for(let i = 0;items >= i; i++){
+      let alto = $('.abierto .contenido .contenido-datos')[i].clientHeight;
+        if(alto > altoprev){
+          altoprev = alto;
+        }
+    }
+    $('.abierto .contenido .contenido-datos').css('min-height',altoprev);
+  }
+  function altotextverde(){
+    let altoprev = 0;
+    let items = $('.abierto .contenido').length - 1;
+    for(let i = 0;items >= i; i++){
+      let alto = $('.abierto .contenido .text-green')[i].clientHeight;
+        if(alto > altoprev){
+          altoprev = alto;
+        }
+    }
+    $('.abierto .contenido .text-green').css('min-height',altoprev);
+  }
+  function urlopne(){
+    let url = window.location.href.indexOf("#");
+    let urllenght = url.length;
+    if(url > 0){
+      console.log(url);
+      $('.opcion').removeClass('activo');
+      let idOpen = window.location.href.substring(url, urllenght);
+      $('.opcion[href="'+ idOpen +'"]').addClass('activo');
+      $('.contenido-tab').removeClass('abierto')
+      $(idOpen).addClass('abierto');
+      especiales();
+    }else{
+      especiales();
+    }
+  }
+  function especiales(){
+    if($('.abierto').hasClass('especiales')){
+      altotext();
+      altotextverde();
+    }else{
+      altotext();
+    }
+  }
+  urlopne();
+  especiales();
+});
+</script>
+</html>
