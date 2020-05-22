@@ -28,6 +28,7 @@
           position: relative;
           padding-bottom: 5px;
           margin-bottom: 20px;
+          padding: 0 15px;
         }
         .titulo h2{
           padding: 5px;
@@ -107,11 +108,22 @@
         .activo{
           color: #3fb128;
         }
+        .contenido-datos{
+          position: relative;
+        }
+        .openmodal{
+          margin: 5px 0;
+          width: 100%;
+          text-align: center;
+          cursor: pointer;
+        }
+        .openmodal .contenido-modal{
+          display: none;
+        }
         .contenedor{
             max-width: 940px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 15px;
             font-family: 'Roboto';
         }
         .contenido-tab:after{
@@ -125,10 +137,11 @@
         .texto-center{
           text-align: center;
         }
-        .contenido{
+        .contenido,.msn{
           display: block;
           float: left;
           width: 97%;
+          line-height: 1em;
           margin: 15px 1.5%;
           background: white;
           border-radius: 20px;
@@ -136,6 +149,70 @@
           overflow: hidden;
           text-align: center;
           box-shadow: 0 0 10px 0  rgba(0,0,0,0.2);
+        }
+        .popUp{
+          background-color: rgba(0,0,0,0.8);
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: -2;
+          height: 100%;
+          opacity: 0;
+          padding: 100px 15px 15px ;
+          transition: 0.5s ease-in-out;
+        }
+        .popUp.abiertopop{
+          z-index: 3;
+          opacity: 1;
+          transition: 0.5s ease-in-out;
+        }
+        .msn .cerrar{
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          border-radius: 100%;
+          width: 30px;
+          height: 30px;
+          background: #3fb128;
+          cursor: pointer;
+        }
+        .msn .cerrar:after{
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border-radius: 10px;
+          display: block;
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          width: 3px;
+          height: 15px;
+          background-color: white;
+        }
+        .msn .cerrar:before{
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border-radius: 10px;
+          display: block;
+          transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          width: 3px;
+          height: 15px;
+          background-color: white;
+        }
+        .msn{
+          overflow: inherit;
+          position: relative;
+          max-width: 320px;
+          margin: 0 auto;
+          display: block;
+          float: inherit;
+          padding: 15px;
+          font-size: 12px;
+        }
+        .msn strong{
+          font-size: 13px;
         }
         @media only screen and (min-width: 768px) {
           .contenido{
@@ -166,12 +243,11 @@
         .contenido p{
           font-size: 10px;
         }
-        .contenido p span{
+        .contenido p span,.msn p span{
           display: block;
         }
         .cuerpo-contenido{
-          padding-left: 15px;
-          padding-right: 15px;
+          padding: 15px;
         }
         .contenido strong{
           text-transform: uppercase;
@@ -194,9 +270,6 @@
           margin-bottom: 15px;
           text-decoration: none;
         }
-        .producto-text{
-          min-height: 30px;
-        }
         .banner-epm img{ 
           width: 100%;
         }
@@ -210,6 +283,14 @@
           width: 100%;
           margin: 0 auto;
           color: #5b5b5f;
+        }
+        .producto-servicio{
+          display: table;
+          width: 100%;
+        }
+        .d-cell{
+          display: table-cell;
+          vertical-align: bottom;
         }
     </style>
 </head>
@@ -356,107 +437,6 @@
               <a href="" class="boton-terminos">Ver terminos y condiciones</a>
             </div>
             <!--final item -->
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                Samsung Store
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta 41% de descuento
-                    </strong>
-                  </span>
-                  <span>en televisores</span>
-                  <br>
-                  <span>
-                    <strong>
-                      Hasta 41% de descuento
-                    </strong>
-                  </span>
-                  <span>en celulares</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                <span>
-                  <b>
-                    Cel: 300 687 98 30
-                  </b> 
-                  Atención a Domicilio
-                </span>
-                <span>
-                  <b>
-                    Tel: 
-                  </b> 
-                  403 73 13
-                </span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 30 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                Diseven
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta 15% de descuento
-                    </strong>
-                  </span>
-                  <span>en kits y dispositivos marca Diseven</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                Atención a Domicilio
-                <span><b>Cel:</b> 321 879 72 89</span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 31 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                BikesToGo
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta el 10% en bicicletas
-                    </strong>
-                  </span>
-                  <span>en eléctricas</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                Atención a Domicilio
-                <span><b>Cel:</b> 313 648 66 05 / 310 534 15 70</span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 30 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
           </div>
           <div class="contenido-tab" id="electrodomesticos">
             <!--inicio item -->
@@ -475,10 +455,34 @@
                     <span><b>Santa Fe:</b> 320 466 95 26</span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Contacto</strong></p>
+                        <p>
+                          Atención a Domicilio
+                          <span>
+                            <b>
+                              Cel: 300 687 98 30
+                            </b> 
+                          </span>
+                          <span>
+                            <b>
+                              Tel: 
+                            </b> 
+                            403 73 13
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -495,10 +499,21 @@
                     <span><b>Cel:</b> 316 410 88 60<span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        contenido 2
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -517,10 +532,14 @@
                     <span><b>WhatsApp:</b> 321 751 56 48</span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos y Calentadores a gas
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos y Calentadores a gas
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -540,10 +559,15 @@
                     <span><b>Santa Fe:</b> 320 466 95 26</span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
+                    </p>
+
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -560,10 +584,15 @@
                     <span><b>Cel:</b> 316 410 88 60<span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
+                    </p>
+
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -582,10 +611,15 @@
                     <span><b>WhatsApp:</b> 321 751 56 48</span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos y Calentadores a gas
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos y Calentadores a gas
+                    </p>
+
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -623,6 +657,13 @@
           </div>
         </div>
     </div>
+    <div class="popUp">
+      <div class="msn">
+        <div class="cerrar"></div>
+        <div class="contenido-datos">
+        </div>
+      </div>
+    </div>
 </body>
 <script src="https://www.somosgrupoepm.com/App_Themes/js/jquery-1.11.1.min.js"></script>
 <script>
@@ -639,19 +680,45 @@ $(document).ready(function(){
     $('#titulo h2').html(titulo)
     especiales();
   });
+  $('.openmodal').on('click',function(e){
+    let contenido = $(this).children('div').html();
+    $('.msn .contenido-datos').html(contenido);
+    $('.popUp').addClass('abiertopop');
+
+  });
+  $('.cerrar').on('click',function(){
+    $('.popUp').removeClass('abiertopop');
+  });
   function altotext(){
     let altoprev = 0;
+    let altoservicio = 0;
+    let altoscon = 0;
     let items = $('.abierto .contenido').length - 1;
     if(items == -1){
       $('.abierto').html('<h2 style="text-align:center;padding:30px 15px;">No encontramos resultados</h2>');
+    }else{
+      for(let i = 0;items >= i; i++){
+        let alto = $('.abierto .contenido .producto-servicio')[i].clientHeight;
+          if(alto > altoservicio){
+            altoservicio = alto;
+          }
+      }
+      for(let i = 0;items >= i; i++){
+        let alto = $('.abierto .contenido .contenido-datos')[i].clientHeight;
+          if(alto > altoprev){
+            altoprev = alto;
+          }
+      }
+      for(let i = 0;items >= i; i++){
+        let alto = $('.abierto .contenido')[i].clientHeight;
+          if(alto > altoscon){
+            altoscon = alto;
+          }
+      }
+      $('.abierto .contenido .contenido-datos').css('min-height',altoprev);
+      $('.abierto .contenido .producto-servicio').css('min-height',altoservicio);
+      $('.abierto .contenido ').css('min-height',altoscon);
     }
-    for(let i = 0;items >= i; i++){
-      let alto = $('.abierto .contenido .contenido-datos')[i].clientHeight;
-        if(alto > altoprev){
-          altoprev = alto;
-        }
-    }
-    $('.abierto .contenido .contenido-datos').css('min-height',altoprev);
   }
   function altotextverde(){
     let altoprev = 0;
@@ -663,6 +730,13 @@ $(document).ready(function(){
         }
     }
     $('.abierto .contenido .text-green').css('min-height',altoprev);
+  }
+  function widthcontenido(){
+    if($(window).width() < 768){
+      $('.contenido').css('width','97%')
+    }else{
+      $('.contenido').css('width','30%')
+    }
   }
   function urlopne(){
     let url = window.location.href.indexOf("#");
@@ -688,6 +762,11 @@ $(document).ready(function(){
       altotext();
     }
   }
+  $(window).resize(function(){
+    widthcontenido();
+    especiales();
+  });
+  widthcontenido();
   urlopne();
   especiales();
 });
