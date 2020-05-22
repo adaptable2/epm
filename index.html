@@ -30,7 +30,10 @@
           margin-bottom: 20px;
         }
         .titulo h2{
+          padding: 5px;
+          padding-left: 40px;
           margin-bottom: 0;
+          background-size: 30px;
         }
         .titulo:after{
           content: "";
@@ -50,15 +53,65 @@
             text-decoration: none;
             font-family: 'Roboto';
             font-weight: bold;
+            padding-left: 30px;
+            background-size: 20px;
+        }
+        .opcion.especiales, h2.especiales{
+          background-image: url(./img/especiales.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        .electrodomesticos{
+          background-image: url(./img/electrodomesticos.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        h2.electrodomesticos{
+          background-size: 20px;
+          background-position: 5px center;
+        }
+        .opcion.electrodomesticos{
+          background-size: 12px;
+          background-position: 5px center;
+        }
+        .tecnologia{
+          background-image: url(./img/tecnologia.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        .construccion{
+          background-image: url(./img/construccion.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        .gasodomesticos{
+          background-image: url(./img/gasodomestica.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        .domotico{
+          background-image: url(./img/domestica.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        .maquinaCoser{
+          background-image: url(./img/coser.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        .movilidad{
+          background-image: url(./img/movilidad.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
         }
         .activo{
           color: #3fb128;
         }
         .contenedor{
-            max-width: 1000px;
+            max-width: 940px;
             width: 100%;
             margin: 0 auto;
-            padding: 15px;
+            padding: 0 15px;
             font-family: 'Roboto';
         }
         .contenido-tab:after{
@@ -119,7 +172,7 @@
           text-transform: uppercase;
           font-size: 11px;
         }
-        .color-grenn{
+        .color-green{
           color: #3fb128;
         }
         .text-green{
@@ -139,233 +192,430 @@
         .producto-text{
           min-height: 30px;
         }
+        .banner-epm{
+          width: 100%;
+        }
+        .background-epm{
+          padding-top: 100px;
+          margin-top: -100px;
+          background: url(./img/bg.png) no-repeat top center / 100%;
+        }
+        .texto-footer{
+          max-width: 568px;
+          width: 100%;
+          margin: 0 auto;
+          color: #5b5b5f;
+        }
     </style>
 </head>
 <body>
     <div class="contenedor">
-        <div id="titulo" class="titulo">
-            <h2>Ofertas especiales vigentes</h2>
+        <div class="banner-epm">
+          <img src="./img/banner.png" alt="">
         </div>
-        <div class="texto-center">
-          <div class="menu-tabs">
-            <div class="d-inline-block">
-              <a class="opcion activo" href='#especiales'>
-                  <strong>Ofertas especiales vigentes</strong>
-              </a>
-              <a class="opcion" href='#electrodomesticos'>
-                  <strong>Electrodomésticos</strong>
-              </a>
-              <a class="opcion" href='#tecnologia'>
-                  <strong>Tecnología</strong>
-              </a>
-              <a class="opcion" href='#construccion'>
-                  <strong>Materiales para la construcción</strong>
-              </a>
-            </div>
-            <div class="d-inline-block">
-              <a class="opcion" href='#gasodomesticos'>
-                  <strong>Gasodomésticos</strong>
-              </a>
-              <a class="opcion" href='#domotico'>
-                  <strong>Domótica</strong>
-              </a>
-              <a class="opcion" href='#maquinaCoser'>
-                  <strong>Máquinas de coser</strong>
-              </a>
-              <a class="opcion" href='#movilidad'>
-                  <strong>Movilidad sostenible</strong>
-              </a>
+        <div class="background-epm">
+          <div id="titulo" class="titulo">
+              <h2 class="especiales">Ofertas especiales vigentes</h2>
+          </div>
+          <div class="texto-center">
+            <div class="menu-tabs">
+              <div class="d-inline-block">
+                <a class="opcion activo especiales" href='#especiales'>
+                    <strong>Ofertas especiales vigentes</strong>
+                </a>
+                <a class="opcion electrodomesticos" href='#electrodomesticos'>
+                    <strong>Electrodomésticos</strong>
+                </a>
+                <a class="opcion tecnologia" href='#tecnologia'>
+                    <strong>Tecnología</strong>
+                </a>
+                <a class="opcion construccion" href='#construccion'>
+                    <strong>Materiales para la construcción</strong>
+                </a>
+              </div>
+              <div class="d-inline-block">
+                <a class="opcion gasodomesticos" href='#gasodomesticos'>
+                    <strong>Gasodomésticos</strong>
+                </a>
+                <a class="opcion domotico" href='#domotico'>
+                    <strong>Domótica</strong>
+                </a>
+                <a class="opcion maquinaCoser" href='#maquinaCoser'>
+                    <strong>Máquinas de coser</strong>
+                </a>
+                <a class="opcion movilidad" href='#movilidad'>
+                    <strong>Movilidad sostenible</strong>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="contenido-tab especiales abierto" id="especiales">
-          <!--inicio item -->
-          <div class="contenido">
-            <h2>
-              Samsung Store
-            </h2>
-            <div class="cuerpo-contenido">
-              <p class="color-grenn text-green"> 
+          <div class="contenido-tab especiales abierto" id="especiales">
+            <!--inicio item -->
+            <div class="contenido">
+              <h2>
+                Samsung Store
+              </h2>
+              <div class="cuerpo-contenido">
+                <p class="color-green text-green"> 
+                  <span>
+                    <strong>
+                      Hasta 41% de descuento
+                    </strong>
+                  </span>
+                  <span>en televisores</span>
+                  <br>
+                  <span>
+                    <strong>
+                      Hasta 41% de descuento
+                    </strong>
+                  </span>
+                  <span>en celulares</span>
+                </p>
+              </div>
+            <div class="contenido-datos">
+              <p><strong>Contacto</strong></p>
+              <p>
                 <span>
-                  <strong>
-                    Hasta 41% de descuento
-                  </strong>
+                  <b>
+                    Cel: 300 687 98 30
+                  </b> 
+                  Atención a Domicilio
                 </span>
-                <span>en televisores</span>
-                <br>
                 <span>
-                  <strong>
-                    Hasta 41% de descuento
-                  </strong>
+                  <b>
+                    Tel: 
+                  </b> 
+                  403 73 13
                 </span>
-                <span>en celulares</span>
               </p>
             </div>
-          <div class="contenido-datos">
-            <p><strong>Contacto</strong></p>
-            <p>
-              <span>
-                <b>
-                  Cel: 300 687 98 30
-                </b> 
+              <p>
+                Vigencia: hasta el 30 de mayo
+              </p>
+              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <h2>
+                Diseven
+              </h2>
+              <div class="cuerpo-contenido">
+                <p class="color-green text-green"> 
+                  <span>
+                    <strong>
+                      Hasta 15% de descuento
+                    </strong>
+                  </span>
+                  <span>en kits y dispositivos marca Diseven</span>
+                </p>
+              </div>
+            <div class="contenido-datos">
+              <p><strong>Contacto</strong></p>
+              <p>
                 Atención a Domicilio
-              </span>
-              <span>
-                <b>
-                  Tel: 
-                </b> 
-                403 73 13
-              </span>
-            </p>
-          </div>
-            <p>
-              Vigencia: hasta el 30 de mayo
-            </p>
-            <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-          </div>
-          <!--final item -->
-          <!--inicio item -->
-          <div class="contenido">
-            <h2>
-              Diseven
-            </h2>
-            <div class="cuerpo-contenido">
-              <p class="color-grenn text-green"> 
+                <span><b>Cel:</b> 321 879 72 89</span>
+              </p>
+            </div>
+              <p>
+                Vigencia: hasta el 31 de mayo
+              </p>
+              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <h2>
+                BikesToGo
+              </h2>
+              <div class="cuerpo-contenido">
+                <p class="color-green text-green"> 
+                  <span>
+                    <strong>
+                      Hasta el 10% en bicicletas
+                    </strong>
+                  </span>
+                  <span>en eléctricas</span>
+                </p>
+              </div>
+            <div class="contenido-datos">
+              <p><strong>Contacto</strong></p>
+              <p>
+                Atención a Domicilio
+                <span><b>Cel:</b> 313 648 66 05 / 310 534 15 70</span>
+              </p>
+            </div>
+              <p>
+                Vigencia: hasta el 30 de mayo
+              </p>
+              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <h2>
+                Samsung Store
+              </h2>
+              <div class="cuerpo-contenido">
+                <p class="color-green text-green"> 
+                  <span>
+                    <strong>
+                      Hasta 41% de descuento
+                    </strong>
+                  </span>
+                  <span>en televisores</span>
+                  <br>
+                  <span>
+                    <strong>
+                      Hasta 41% de descuento
+                    </strong>
+                  </span>
+                  <span>en celulares</span>
+                </p>
+              </div>
+            <div class="contenido-datos">
+              <p><strong>Contacto</strong></p>
+              <p>
                 <span>
-                  <strong>
-                    Hasta 15% de descuento
-                  </strong>
+                  <b>
+                    Cel: 300 687 98 30
+                  </b> 
+                  Atención a Domicilio
                 </span>
-                <span>en kits y dispositivos marca Diseven</span>
-              </p>
-            </div>
-          <div class="contenido-datos">
-            <p><strong>Contacto</strong></p>
-            <p>
-              Atención a Domicilio
-              <span><b>Cel:</b> 321 879 72 89</span>
-            </p>
-          </div>
-            <p>
-              Vigencia: hasta el 31 de mayo
-            </p>
-            <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-          </div>
-          <!--final item -->
-          <!--inicio item -->
-          <div class="contenido">
-            <h2>
-              BikesToGo
-            </h2>
-            <div class="cuerpo-contenido">
-              <p class="color-grenn text-green"> 
                 <span>
-                  <strong>
-                    Hasta el 10% en bicicletas
-                  </strong>
+                  <b>
+                    Tel: 
+                  </b> 
+                  403 73 13
                 </span>
-                <span>en eléctricas</span>
               </p>
             </div>
-          <div class="contenido-datos">
-            <p><strong>Contacto</strong></p>
-            <p>
-              Atención a Domicilio
-              <span><b>Cel:</b> 313 648 66 05 / 310 534 15 70</span>
+              <p>
+                Vigencia: hasta el 30 de mayo
+              </p>
+              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <h2>
+                Diseven
+              </h2>
+              <div class="cuerpo-contenido">
+                <p class="color-green text-green"> 
+                  <span>
+                    <strong>
+                      Hasta 15% de descuento
+                    </strong>
+                  </span>
+                  <span>en kits y dispositivos marca Diseven</span>
+                </p>
+              </div>
+            <div class="contenido-datos">
+              <p><strong>Contacto</strong></p>
+              <p>
+                Atención a Domicilio
+                <span><b>Cel:</b> 321 879 72 89</span>
+              </p>
+            </div>
+              <p>
+                Vigencia: hasta el 31 de mayo
+              </p>
+              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <h2>
+                BikesToGo
+              </h2>
+              <div class="cuerpo-contenido">
+                <p class="color-green text-green"> 
+                  <span>
+                    <strong>
+                      Hasta el 10% en bicicletas
+                    </strong>
+                  </span>
+                  <span>en eléctricas</span>
+                </p>
+              </div>
+            <div class="contenido-datos">
+              <p><strong>Contacto</strong></p>
+              <p>
+                Atención a Domicilio
+                <span><b>Cel:</b> 313 648 66 05 / 310 534 15 70</span>
+              </p>
+            </div>
+              <p>
+                Vigencia: hasta el 30 de mayo
+              </p>
+              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
+            </div>
+            <!--final item -->
+          </div>
+          <div class="contenido-tab" id="electrodomesticos">
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Multintegral</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span><b>Medellín:</b> 321 699 88 52 /</span>
+                    <span> 321 699 88 33 / 321 699 88 99</span>
+                    <span><b>Rionegro:</b> 321 740 01 28</span>
+                    <span><b>Santa Fe:</b> 320 466 95 26</span>
+                  </p>
+                </div>
+                <p><strong>producto o servicio</strong></p>
+                <p class='producto-text'>
+                  Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
+                </p>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Maservinox</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span><b>Cel:</b> 316 410 88 60<span>
+                  </p>
+                </div>
+                <p><strong>producto o servicio</strong></p>
+                <p class='producto-text'>
+                  Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
+                </p>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Todo Hogar</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span><b>Fijo:</b> 322 36 63 </span>
+                    <span><b>Cel:</b> 317 581 58 41 </span>
+                    <span><b>WhatsApp:</b> 321 751 56 48</span>
+                  </p>
+                </div>
+                <p><strong>producto o servicio</strong></p>
+                <p class='producto-text'>
+                  Electrodomésticos y Calentadores a gas
+                </p>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Multintegral</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span><b>Medellín:</b> 321 699 88 52 /</span>
+                    <span> 321 699 88 33 / 321 699 88 99</span>
+                    <span><b>Rionegro:</b> 321 740 01 28</span>
+                    <span><b>Santa Fe:</b> 320 466 95 26</span>
+                  </p>
+                </div>
+                <p><strong>producto o servicio</strong></p>
+                <p class='producto-text'>
+                  Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
+                </p>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Maservinox</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span><b>Cel:</b> 316 410 88 60<span>
+                  </p>
+                </div>
+                <p><strong>producto o servicio</strong></p>
+                <p class='producto-text'>
+                  Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
+                </p>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Todo Hogar</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span><b>Fijo:</b> 322 36 63 </span>
+                    <span><b>Cel:</b> 317 581 58 41 </span>
+                    <span><b>WhatsApp:</b> 321 751 56 48</span>
+                  </p>
+                </div>
+                <p><strong>producto o servicio</strong></p>
+                <p class='producto-text'>
+                  Electrodomésticos y Calentadores a gas
+                </p>
+              </div>
+            </div>
+            <!--final item -->
+          </div>
+          <div class="contenido-tab" id="tecnologia">
+              
+          </div>
+          <div class="contenido-tab" id="construccion">
+              
+          </div>
+          <div class="contenido-tab" id="gasodomesticos">
+              
+          </div>
+          <div class="contenido-tab" id="domotico">
+              
+          </div>
+          <div class="contenido-tab" id="maquinaCoser">
+              
+          </div>
+          <div class="contenido-tab" id="movilidad">
+              
+          </div>
+          <div class="texto-footer">
+            <p class="texto-center">
+              Para nosotros es muy importante tu experiencia, cuéntanos como te va con nuestros aliados 
+              <strong class="color-green">
+                a través de nuestra línea 44 44 800
+              </strong > 
+            </p> 
+            <p class="texto-center">
+              <small>
+                *Términos y condiciones: el valor del domicilio es estipulado por el aliado comercial. Cada aliado es libre de realizar su propia gestión comercial como lo considere.
+              </small>
             </p>
           </div>
-            <p>
-              Vigencia: hasta el 30 de mayo
-            </p>
-            <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-          </div>
-          <!--final item -->
-        </div>
-        <div class="contenido-tab" id="electrodomesticos">
-          <!--inicio item -->
-          <div class="contenido">
-            <div class="header">
-              <h2>Multintegral</h2> 
-            </div>
-            <div class="cuerpo-contenido">
-              <div class="contenido-datos">
-                <p><strong>Contacto</strong></p>
-                <p>
-                  Atención a Domicilio
-                  <span><b>Medellín:</b> 321 699 88 52 /</span>
-                  <span> 321 699 88 33 / 321 699 88 99</span>
-                  <span><b>Rionegro:</b> 321 740 01 28</span>
-                  <span><b>Santa Fe:</b> 320 466 95 26</span>
-                </p>
-              </div>
-              <p><strong>producto o servicio</strong></p>
-              <p class='producto-text'>
-                Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
-              </p>
-            </div>
-          </div>
-          <!--final item -->
-          <!--inicio item -->
-          <div class="contenido">
-            <div class="header">
-              <h2>Maservinox</h2> 
-            </div>
-            <div class="cuerpo-contenido">
-              <div class="contenido-datos">
-                <p><strong>Contacto</strong></p>
-                <p>
-                  Atención a Domicilio
-                  <span><b>Cel:</b> 316 410 88 60<span>
-                </p>
-              </div>
-              <p><strong>producto o servicio</strong></p>
-              <p class='producto-text'>
-                Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
-              </p>
-            </div>
-          </div>
-          <!--final item -->
-          <!--inicio item -->
-          <div class="contenido">
-            <div class="header">
-              <h2>Todo Hogar</h2> 
-            </div>
-            <div class="cuerpo-contenido">
-              <div class="contenido-datos">
-                <p><strong>Contacto</strong></p>
-                <p>
-                  Atención a Domicilio
-                  <span><b>Fijo:</b> 322 36 63 </span>
-                  <span><b>Cel:</b> 317 581 58 41 </span>
-                  <span><b>WhatsApp:</b> 321 751 56 48</span>
-                </p>
-              </div>
-              <p><strong>producto o servicio</strong></p>
-              <p class='producto-text'>
-                Electrodomésticos y Calentadores a gas
-              </p>
-            </div>
-          </div>
-          <!--final item -->
-          <!--inicio item -->
-        </div>
-        <div class="contenido-tab" id="tecnologia">
-            
-        </div>
-        <div class="contenido-tab" id="construccion">
-            
-        </div>
-        <div class="contenido-tab" id="gasodomesticos">
-            
-        </div>
-        <div class="contenido-tab" id="domotico">
-            
-        </div>
-        <div class="contenido-tab" id="maquinaCoser">
-            
-        </div>
-        <div class="contenido-tab" id="movilidad">
-            
         </div>
     </div>
 </body>
@@ -379,12 +629,17 @@ $(document).ready(function(){
     $(this).addClass('activo');  
     $('.contenido-tab').removeClass('abierto');
     $(href).addClass('abierto');
+    $('#titulo h2').removeClass();
+    $('#titulo h2').addClass(href.replace('#', ''));
     $('#titulo h2').html(titulo)
     especiales();
   });
   function altotext(){
     let altoprev = 0;
     let items = $('.abierto .contenido').length - 1;
+    if(items == -1){
+      $('.abierto').html('<h2 style="text-align:center;padding:30px 15px;">No encontramos resultados</h2>');
+    }
     for(let i = 0;items >= i; i++){
       let alto = $('.abierto .contenido .contenido-datos')[i].clientHeight;
         if(alto > altoprev){
@@ -408,12 +663,13 @@ $(document).ready(function(){
     let url = window.location.href.indexOf("#");
     let urllenght = url.length;
     if(url > 0){
-      console.log(url);
       $('.opcion').removeClass('activo');
       let idOpen = window.location.href.substring(url, urllenght);
       $('.opcion[href="'+ idOpen +'"]').addClass('activo');
       $('.contenido-tab').removeClass('abierto')
       $(idOpen).addClass('abierto');
+      $('#titulo h2').removeClass();
+      $('#titulo h2').addClass(idOpen.replace('#', ''));
       especiales();
     }else{
       especiales();
