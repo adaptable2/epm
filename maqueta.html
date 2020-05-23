@@ -28,6 +28,7 @@
           position: relative;
           padding-bottom: 5px;
           margin-bottom: 20px;
+          padding: 0 15px;
         }
         .titulo h2{
           padding: 5px;
@@ -57,12 +58,12 @@
             background-size: 20px;
         }
         .opcion.especiales, h2.especiales{
-          background-image: url(./img/especiales.svg);
+          background-image: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/especiales.svg);
           background-repeat: no-repeat;
           background-position: left center;
         }
         .electrodomesticos{
-          background-image: url(./img/electrodomesticos.svg);
+          background-image: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/electrodomesticos.svg);
           background-repeat: no-repeat;
           background-position: left center;
         }
@@ -75,43 +76,54 @@
           background-position: 5px center;
         }
         .tecnologia{
-          background-image: url(./img/tecnologia.svg);
+          background-image: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/tecnologia.svg);
           background-repeat: no-repeat;
           background-position: left center;
         }
         .construccion{
-          background-image: url(./img/construccion.svg);
+          background-image: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/construccion.svg);
           background-repeat: no-repeat;
           background-position: left center;
         }
         .gasodomesticos{
-          background-image: url(./img/gasodomestica.svg);
+          background-image: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/gasodomestica.svg);
           background-repeat: no-repeat;
           background-position: left center;
         }
         .domotico{
-          background-image: url(./img/domestica.svg);
+          background-image: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/domestica.svg);
           background-repeat: no-repeat;
           background-position: left center;
         }
         .maquinaCoser{
-          background-image: url(./img/coser.svg);
+          background-image: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/coser.svg);
           background-repeat: no-repeat;
           background-position: left center;
         }
         .movilidad{
-          background-image: url(./img/movilidad.svg);
+          background-image: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/movilidad.svg);
           background-repeat: no-repeat;
           background-position: left center;
         }
         .activo{
           color: #3fb128;
         }
+        .contenido-datos{
+          position: relative;
+        }
+        .openmodal{
+          margin: 5px 0;
+          width: 100%;
+          text-align: center;
+          cursor: pointer;
+        }
+        .openmodal .contenido-modal{
+          display: none;
+        }
         .contenedor{
             max-width: 940px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 15px;
             font-family: 'Roboto';
         }
         .contenido-tab:after{
@@ -125,10 +137,11 @@
         .texto-center{
           text-align: center;
         }
-        .contenido{
+        .contenido,.msn{
           display: block;
           float: left;
           width: 97%;
+          line-height: 1em;
           margin: 15px 1.5%;
           background: white;
           border-radius: 20px;
@@ -137,7 +150,71 @@
           text-align: center;
           box-shadow: 0 0 10px 0  rgba(0,0,0,0.2);
         }
-        @media screen (min-width: 768px){
+        .popUp{
+          background-color: rgba(0,0,0,0.8);
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: -2;
+          height: 100%;
+          opacity: 0;
+          padding: 100px 15px 15px ;
+          transition: 0.5s ease-in-out;
+        }
+        .popUp.abiertopop{
+          z-index: 3;
+          opacity: 1;
+          transition: 0.5s ease-in-out;
+        }
+        .msn .cerrar{
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          border-radius: 100%;
+          width: 30px;
+          height: 30px;
+          background: #3fb128;
+          cursor: pointer;
+        }
+        .msn .cerrar:after{
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border-radius: 10px;
+          display: block;
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          width: 3px;
+          height: 15px;
+          background-color: white;
+        }
+        .msn .cerrar:before{
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border-radius: 10px;
+          display: block;
+          transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          width: 3px;
+          height: 15px;
+          background-color: white;
+        }
+        .msn{
+          overflow: inherit;
+          position: relative;
+          max-width: 320px;
+          margin: 0 auto;
+          display: block;
+          float: inherit;
+          padding: 15px;
+          font-size: 12px;
+        }
+        .msn strong{
+          font-size: 13px;
+        }
+        @media only screen and (min-width: 768px) {
           .contenido{
             width: 30%;
           }
@@ -166,12 +243,12 @@
         .contenido p{
           font-size: 10px;
         }
-        .contenido p span{
+        .contenido p span,.msn p span{
           display: block;
+          padding: 2px 0;
         }
         .cuerpo-contenido{
-          padding-left: 15px;
-          padding-right: 15px;
+          padding: 15px;
         }
         .contenido strong{
           text-transform: uppercase;
@@ -194,16 +271,13 @@
           margin-bottom: 15px;
           text-decoration: none;
         }
-        .producto-text{
-          min-height: 30px;
-        }
         .banner-epm img{ 
           width: 100%;
         }
         .background-epm{
           padding-top: 100px;
           margin-top: -100px;
-          background: url(./img/bg.png) no-repeat top center / 100%;
+          background: url(https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/bg.png) no-repeat top center / 100%;
         }
         .texto-footer{
           max-width: 568px;
@@ -211,12 +285,20 @@
           margin: 0 auto;
           color: #5b5b5f;
         }
+        .producto-servicio{
+          display: table;
+          width: 100%;
+        }
+        .d-cell{
+          display: table-cell;
+          vertical-align: bottom;
+        }
     </style>
 </head>
 <body>
     <div class="contenedor">
         <div class="banner-epm">
-          <img src="./img/banner.png" alt="">
+          <img src="https://somosgrupoepm.com/App_Themes/img/2020/mayo/aliados-credito/ofertas/banner.png" alt="">
         </div>
         <div class="background-epm">
           <div id="titulo" class="titulo">
@@ -255,208 +337,6 @@
             </div>
           </div>
           <div class="contenido-tab especiales abierto" id="especiales">
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                Samsung Store
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta 41% de descuento
-                    </strong>
-                  </span>
-                  <span>en televisores</span>
-                  <br>
-                  <span>
-                    <strong>
-                      Hasta 41% de descuento
-                    </strong>
-                  </span>
-                  <span>en celulares</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                <span>
-                  <b>
-                    Cel: 300 687 98 30
-                  </b> 
-                  Atención a Domicilio
-                </span>
-                <span>
-                  <b>
-                    Tel: 
-                  </b> 
-                  403 73 13
-                </span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 30 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                Diseven
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta 15% de descuento
-                    </strong>
-                  </span>
-                  <span>en kits y dispositivos marca Diseven</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                Atención a Domicilio
-                <span><b>Cel:</b> 321 879 72 89</span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 31 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                BikesToGo
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta el 10% en bicicletas
-                    </strong>
-                  </span>
-                  <span>en eléctricas</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                Atención a Domicilio
-                <span><b>Cel:</b> 313 648 66 05 / 310 534 15 70</span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 30 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                Samsung Store
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta 41% de descuento
-                    </strong>
-                  </span>
-                  <span>en televisores</span>
-                  <br>
-                  <span>
-                    <strong>
-                      Hasta 41% de descuento
-                    </strong>
-                  </span>
-                  <span>en celulares</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                <span>
-                  <b>
-                    Cel: 300 687 98 30
-                  </b> 
-                  Atención a Domicilio
-                </span>
-                <span>
-                  <b>
-                    Tel: 
-                  </b> 
-                  403 73 13
-                </span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 30 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                Diseven
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta 15% de descuento
-                    </strong>
-                  </span>
-                  <span>en kits y dispositivos marca Diseven</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                Atención a Domicilio
-                <span><b>Cel:</b> 321 879 72 89</span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 31 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
-            <!--inicio item -->
-            <div class="contenido">
-              <h2>
-                BikesToGo
-              </h2>
-              <div class="cuerpo-contenido">
-                <p class="color-green text-green"> 
-                  <span>
-                    <strong>
-                      Hasta el 10% en bicicletas
-                    </strong>
-                  </span>
-                  <span>en eléctricas</span>
-                </p>
-              </div>
-            <div class="contenido-datos">
-              <p><strong>Contacto</strong></p>
-              <p>
-                Atención a Domicilio
-                <span><b>Cel:</b> 313 648 66 05 / 310 534 15 70</span>
-              </p>
-            </div>
-              <p>
-                Vigencia: hasta el 30 de mayo
-              </p>
-              <a href="" class="boton-terminos">Ver terminos y condiciones</a>
-            </div>
-            <!--final item -->
           </div>
           <div class="contenido-tab" id="electrodomesticos">
             <!--inicio item -->
@@ -470,15 +350,20 @@
                   <p>
                     Atención a Domicilio
                     <span><b>Medellín:</b> 321 699 88 52 /</span>
-                    <span> 321 699 88 33 / 321 699 88 99</span>
-                    <span><b>Rionegro:</b> 321 740 01 28</span>
-                    <span><b>Santa Fe:</b> 320 466 95 26</span>
+                    <span>321 699 88 33 / 321 699 88 99</span>
+                    <span><b>Rionegro:</b> 321 740 01 28 </span>
+                    <span><b>Santa Fe:</b> 320 466 95 26</span> 
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
+                    </p>
+
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -492,13 +377,18 @@
                   <p><strong>Contacto</strong></p>
                   <p>
                     Atención a Domicilio
-                    <span><b>Cel:</b> 316 410 88 60<span>
+                    <span><b>Cel:</b> 316 410 88 60</span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
+                    </p>
+
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -512,18 +402,874 @@
                   <p><strong>Contacto</strong></p>
                   <p>
                     Atención a Domicilio
-                    <span><b>Fijo:</b> 322 36 63 </span>
-                    <span><b>Cel:</b> 317 581 58 41 </span>
-                    <span><b>WhatsApp:</b> 321 751 56 48</span>
+                    <span>
+                      <b>
+                        Fijo:
+                      </b> 
+                      322 36 63
+                    </span>
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      317 581 58 41 
+                    </span>
+                    <span>
+                      <b>
+                        WhatsApp:
+                      </b> 
+                      321 751 56 48
+                    </span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos y Calentadores a gas
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos y Calentadores a gas
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Navarro Ospina</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      321 748 06 58
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Audio y video, Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Hogar y Moda</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Área Metropolitana Fijo:
+                      </b> 
+                      448 45 68
+                    </span>
+                    <span>
+                      <b>
+                        Línea servicio al cliente:
+                      </b> 
+                      01 8000 412 052 
+                    </span>
+                    <span>
+                      <b>
+                        WhatsApp servicio:
+                      </b> 
+                      315 364 33 83
+                    </span>
+                    <span>
+                      <b>
+                        WhatsApp redes sociales: 
+                      </b> 
+                      314 514 27 96
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Audio y video, Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Multi Hogar</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      317 371 61 21 / 
+                    </span>
+                    <span>317 442 40 55</span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Éxito</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      604 19 19
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p>Atención en los puntos de ventas</p>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología, electrodomésticos, gasodomésticos y movilidad sostenible
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Jumbo y Metro</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      657 97 97
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p>Atención en los puntos de ventas</p>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología, electrodomésticos, gasodomésticos y movilidad sostenible
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Electrobello</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      312 735 20 91
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos y tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Abo</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Arboletes Fijo: 
+                      </b> 
+                      820 01 01 / 820 04 88 
+                    </span>
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      311 320 22 87 / 311 609 33 53
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <span>
+                            <b>
+                              Centro:
+                            </b> 
+                            Calle 30 # 29-02
+                          </span>
+                          <span>
+                            <b>
+                              Horario: 
+                            </b> 
+                            8-12m y 1-5 pm
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Materiales para la construcción y Electrodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Isajer</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Andes, Betania, Jardín, Hispania, Melgar, Venecia, Ciudad Bolívar, Tarso
+                      </b> 
+                    </span>
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      321 823 78 62 / 311 319 68 55
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Materiales para la construcción, Electrodomésticos y Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Dimargas</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      316 878 18 77 / 316 743 19 10
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <span>
+                            <b>
+                              Centro:
+                            </b> 
+                            Cra 51 # 41-52 
+                          </span>
+                          <span>
+                            <b>
+                              Horario: 
+                            </b> 
+                            8 am a 4 pm
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Calentadores a gas y Electrodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>J9 Distribuciones</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      320 650 85 25 /
+                    </span>
+                    <span>
+                      310 377 51 26
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Cuidado personal, tecnología, Audio y video, Electromenores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+          </div>
+          <div class="contenido-tab" id="tecnologia">
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Click Computo</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      301 630 50 27 /
+                    </span>
+                    <span>
+                      321 814 49 59
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología audio y video
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>J9 Distribuciones</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      320 650 85 25 / 310 377 51 26
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Cuidado personal, tecnología, Audio y video, Electromenores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Control Tech Inc</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Fijo: 
+                      </b> 
+                      692 30 78 / 322 42 06
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Computadores, periféricos, PC Gamer
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Punto Tablet</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      350 750 03 66 / 320 743 21 14
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Computadores, periféricos, celulares y tabletas
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>TecAc Soluciones</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Fijo: 
+                      </b> 
+                      583 55 80 
+                    </span>
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      311 396 40 43
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología, Computadores, celulares, Tablet y accesorios
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Unitec</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      316 524 85 13
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología, audio y video
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Tecno Shopping</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      312 6477597 /
+                    </span>
+                    <span>
+                      318 364 86 84
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Digital Store</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      301 578 64 84
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología audio y video
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>AVS</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      301 416 25 90
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Éxito</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      604 19 19
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p>Atención en los puntos de venta</p>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología, electrodomésticos, gasodomésticos y movilidad sostenible
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Jumbo y Metro</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      657 97 97
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p>Atención en los puntos de venta</p>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología, electrodomésticos, gasodomésticos y movilidad sostenible
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Isajer</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Andes, Betania, Jardín, Hispania, Melgar, Venecia, Ciudad Bolívar, Tarso
+                      </b> 
+                    </span>
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      321 823 78 62 / 311 319 68 55
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Materiales para la construcción, Electrodomésticos y Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Electrobello</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      312 735 20 91
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos y tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Hogar y Moda</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Área Metropolitana Fijo:
+                      </b> 
+                      448 45 68
+                    </span>
+                    <span>
+                      <b>
+                        Línea servicio al cliente:
+                      </b> 
+                      01 8000 412 052 
+                    </span>
+                    <span>
+                      <b>
+                        WhatsApp servicio:
+                      </b> 
+                      315 364 33 83
+                    </span>
+                    <span>
+                      <b>
+                        WhatsApp redes sociales: 
+                      </b> 
+                      314 514 27 96
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Audio y video, Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->  
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Navarro Ospina</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      321 748 06 58
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Audio y video, Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->     
             <!--inicio item -->
             <div class="contenido">
               <div class="header">
@@ -535,18 +1281,652 @@
                   <p>
                     Atención a Domicilio
                     <span><b>Medellín:</b> 321 699 88 52 /</span>
-                    <span> 321 699 88 33 / 321 699 88 99</span>
-                    <span><b>Rionegro:</b> 321 740 01 28</span>
-                    <span><b>Santa Fe:</b> 320 466 95 26</span>
+                    <span>321 699 88 33 / 321 699 88 99</span>
+                    <span><b>Rionegro:</b> 321 740 01 28 </span>
+                    <span><b>Santa Fe:</b> 320 466 95 26</span> 
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Audio y video, Tecnología, Materiales para la construcción
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->   
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Samsung Store</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      300 687 98 30 
+                    </span>
+                    <span>
+                      <b>
+                        Tel:
+                      </b> 
+                      403 73 13
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p>
+                      Posee canal digital por <br>
+                      <a href="www.vivalaera.com" class='color-green'>www.vivalaera.com</a>
+                    </p>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología audio y video
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Tienda tecnológica</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      310 883 89 10 / 313 719 13 33
+                    </span>
+                    <span>
+                      <b>
+                        Tel:
+                      </b> 
+                      352 23 74 / 352 46 56
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología audio y video
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Cabonet computadores</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      312 866 71 59
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <span>
+                            <b>
+                              Buenos Aires: 
+                            </b> 
+                            Calle 45 # 21-85
+                          </span>
+                          <span>
+                            <b>
+                              Horario: 
+                            </b> 
+                            10am a 7pm
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Tigo</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <span>
+                            <b>Apartadó: </b>
+                            Cra 99A # 96-07
+                          </span>
+                          <span>
+                            <b>Medellín: </b>
+                            Cra 46 # 52-50 
+                          </span>
+                          <span>
+                            <b>Envigado: </b>
+                            Cra 42 # 38SUR-69
+                          </span>
+                          <span>
+                            <b>CC La Florida: </b>
+                            Calle 71 # 65-150 Local 1357
+                          </span>
+                          <span>
+                            <b>Medellín: </b>
+                            Calle 49 # 20-90 Local 330
+                          </span>
+                          <span>
+                            <b>CC Mayorca: </b>
+                            Calle 51 SUR # 48-57 Local 2197
+                          </span>
+                          <span>
+                            <b>Medellín: </b>
+                            Cra 52 # 53-35
+                          </span>
+                          <span>
+                            <b>CC Los Molinos: </b>
+                            Calle 30A # 82A-26 Local 1109 
+                          </span>
+                          <span>
+                            <b>CC Oviedo: </b>
+                            Calle 6 SUR # 43A-227 Local 3408 
+                          </span>
+                          <span>
+                            <b>Medellín: </b>
+                            Calle 29 # 49G-10 Local 1107 Y 1110 Torre Sur Piso 1
+                          </span>
+                          <span>
+                            <b>CC Puerta del Norte: </b>
+                            Dig 55 # 34-67 Local 2059 Etapa 2 
+                          </span>
+                          <span>
+                            <b>Rionegro: </b>
+                            Calle 47 # 55-84
+                          </span>
+                          <span>
+                            <b>San Andrés: </b>
+                            Cra 3 A # 3 Calle 12 Av. La Jaiba - Local 101
+                          </span>
+                          <span>
+                            <b>CC San Nicolas: </b>
+                            Calle 43 # 54-139 Local 2301 
+                          </span>
+                          <span>
+                            <b>Medellín: </b>
+                            Cra 66B # 34A-76 Local 122
+                          </span>
+                          <span>
+                            <b>CC Viva Envigado: </b>
+                            Cra 48 # 32BSUR-139 Local 226
+                          </span>
+                          <span>
+                            <b>Horario: </b>
+                            Varia según el establecimiento
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->
+          </div>
+          <div class="contenido-tab" id="construccion">
+
+          </div>
+          <div class="contenido-tab" id="gasodomesticos">
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Gas y Hogar</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      300 741 93 63
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Gasodomésticos, mantenimiento de gasodomésticos, electrodomésticos y reformas de redes de gas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>J&S Distrihogares</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Fijo: 
+                      </b> 
+                      448 10 82
+                    </span>
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      317 762 06 17 
+                    </span>
+                    <span>
+                      <b>
+                        WhatsApp:
+                      </b> 
+                      317 706 17 16
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        
+                        <p>
+                          <b>Horario:</b>
+                          7 am a 3 pm 
+                        </p>
+                        <p>
+                          <b>Belén: </b>
+                          Calle 28 # 87A-03 
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Calentadores a gas
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Dimargas</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      316 878 18 77 / 316 743 19 10
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <b>
+                            Centro:
+                          </b>
+                          Cra 51 # 41 - 52
+                        </p>
+                        <p>
+                          <b>
+                            Horario: 
+                          </b>
+                          8 am a 4 pm
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Calentadores a gas y Electrodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Mundial de Gas y Agua</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      311 663 9609
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <b>
+                            Belén: 
+                          </b>
+                          Calle 30 B # 71-37 
+                        </p>
+                        <p>
+                          <b>
+                            Horario: 
+                          </b>
+                          8 am a 5 pm
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Gasodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>D’MOGAS</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Fijo:
+                      </b> 
+                      556 45 26
+                    </span>
+                    <span>
+                      <b>
+                        Cel y WhatsApp: 
+                      </b> 
+                      314 821 02 51
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Gasodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Gas Nueva Era</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Fijo:
+                      </b> 
+                      448 17 82 / 232 60 00 
+                    </span>
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      301 745 40 01
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Gasodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Agingas</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      314 888 96 92 / 320 694 39 60
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <b>
+                            Belén: 
+                          </b>
+                          Calle 30 B # 71-37 
+                          </p>
+                          <p>
+                            <b>
+                              Horario: 
+                            </b>
+                            8 am a 5 pm
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Gasodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Punto de la Chupa</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      261 46 68
+                    </span>
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      300 268 12 39 / 301 525 69 85
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <b>
+                            Centro:
+                          </b>
+                          Cra 51 # 41-144 Local 105 
+                          </p>
+                          <p>
+                            <b>
+                              Horario: 
+                            </b>
+                            8 am a 8 pm
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Gasodomésticos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Premac</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      372 18 44
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <div class="color-green openmodal">
+                      <p>Atención en puntos de venta</p>
+                      <div class="contenido-modal">
+                        <p><strong>Atención en puntos de venta</strong></p>
+                        <p>
+                          <b>
+                            Itagüí:
+                          </b>
+                          Autopista sur 24-52 
+                        </p>
+                        <p>
+                          <b>
+                            Horario:
+                          </b>
+                          8 am a 4 pm
+                        </p>
+                        <p>
+                          <b>
+                            Centro: 
+                          </b>
+                          Metrocentro 
+                        </p>
+                        <p>
+                          <b>
+                            Horario: 
+                          </b>
+                          8 am a 4 pm
+                        </p>
+                      </div>
+                    </div>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Mercado Gas
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->   
             <!--inicio item -->
             <div class="contenido">
               <div class="header">
@@ -557,13 +1937,18 @@
                   <p><strong>Contacto</strong></p>
                   <p>
                     Atención a Domicilio
-                    <span><b>Cel:</b> 316 410 88 60<span>
+                    <span><b>Cel:</b> 316 410 88 60</span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos, Gasodomésticos, Materiales para la construcción y Tecnología
+                    </p>
+
+                  </div>
+                </div>
               </div>
             </div>
             <!--final item -->
@@ -577,30 +1962,126 @@
                   <p><strong>Contacto</strong></p>
                   <p>
                     Atención a Domicilio
-                    <span><b>Fijo:</b> 322 36 63 </span>
-                    <span><b>Cel:</b> 317 581 58 41 </span>
-                    <span><b>WhatsApp:</b> 321 751 56 48</span>
+                    <span>
+                      <b>
+                        Fijo:
+                      </b> 
+                      322 36 63
+                    </span>
+                    <span>
+                      <b>
+                        Cel:
+                      </b> 
+                      317 581 58 41 
+                    </span>
+                    <span>
+                      <b>
+                        WhatsApp:
+                      </b> 
+                      321 751 56 48
+                    </span>
                   </p>
                 </div>
-                <p><strong>producto o servicio</strong></p>
-                <p class='producto-text'>
-                  Electrodomésticos y Calentadores a gas
-                </p>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Electrodomésticos y Calentadores a gas
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <!--final item -->
-          </div>
-          <div class="contenido-tab" id="tecnologia">
-              
-          </div>
-          <div class="contenido-tab" id="construccion">
-              
-          </div>
-          <div class="contenido-tab" id="gasodomesticos">
-              
+            <!--final item -->   
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Éxito</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      604 19 19
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p>Atención en los puntos de ventas</p>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología, electrodomésticos, gasodomésticos y movilidad sostenible
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->   
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Jumbo y Metro</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    <span>
+                      <b>
+                        Tel: 
+                      </b> 
+                      657 97 97
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p>Atención en los puntos de ventas</p>
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Tecnología, electrodomésticos, gasodomésticos y movilidad sostenible
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->               
           </div>
           <div class="contenido-tab" id="domotico">
-              
+            <!--inicio item -->
+            <div class="contenido">
+              <div class="header">
+                <h2>Diseven</h2> 
+              </div>
+              <div class="cuerpo-contenido">
+                <div class="contenido-datos">
+                  <p><strong>Contacto</strong></p>
+                  <p>
+                    Atención a Domicilio
+                    <span>
+                      <b>
+                        Cel: 
+                      </b> 
+                      321 879 72 89
+                    </span>
+                  </p>
+                </div>
+                <div class="producto-servicio">
+                  <div class="d-cell">
+                    <p><strong>producto o servicio</strong></p>
+                    <p>
+                      Domótica
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final item -->              
           </div>
           <div class="contenido-tab" id="maquinaCoser">
               
@@ -623,6 +2104,13 @@
           </div>
         </div>
     </div>
+    <div class="popUp">
+      <div class="msn">
+        <div class="cerrar"></div>
+        <div class="contenido-datos">
+        </div>
+      </div>
+    </div>
 </body>
 <script src="https://www.somosgrupoepm.com/App_Themes/js/jquery-1.11.1.min.js"></script>
 <script>
@@ -639,19 +2127,45 @@ $(document).ready(function(){
     $('#titulo h2').html(titulo)
     especiales();
   });
+  $('.openmodal').on('click',function(e){
+    let contenido = $(this).children('div').html();
+    $('.msn .contenido-datos').html(contenido);
+    $('.popUp').addClass('abiertopop');
+
+  });
+  $('.cerrar').on('click',function(){
+    $('.popUp').removeClass('abiertopop');
+  });
   function altotext(){
     let altoprev = 0;
+    let altoservicio = 0;
+    let altoscon = 0;
     let items = $('.abierto .contenido').length - 1;
     if(items == -1){
       $('.abierto').html('<h2 style="text-align:center;padding:30px 15px;">No encontramos resultados</h2>');
+    }else{
+      for(let i = 0;items >= i; i++){
+        let alto = $('.abierto .contenido .producto-servicio')[i].clientHeight;
+          if(alto > altoservicio){
+            altoservicio = alto;
+          }
+      }
+      for(let i = 0;items >= i; i++){
+        let alto = $('.abierto .contenido .contenido-datos')[i].clientHeight;
+          if(alto > altoprev){
+            altoprev = alto;
+          }
+      }
+      for(let i = 0;items >= i; i++){
+        let alto = $('.abierto .contenido')[i].clientHeight;
+          if(alto > altoscon){
+            altoscon = alto;
+          }
+      }
+      $('.abierto .contenido .contenido-datos').css('min-height',altoprev);
+      $('.abierto .contenido .producto-servicio').css('min-height',altoservicio);
+      $('.abierto .contenido ').css('min-height',altoscon);
     }
-    for(let i = 0;items >= i; i++){
-      let alto = $('.abierto .contenido .contenido-datos')[i].clientHeight;
-        if(alto > altoprev){
-          altoprev = alto;
-        }
-    }
-    $('.abierto .contenido .contenido-datos').css('min-height',altoprev);
   }
   function altotextverde(){
     let altoprev = 0;
@@ -663,6 +2177,13 @@ $(document).ready(function(){
         }
     }
     $('.abierto .contenido .text-green').css('min-height',altoprev);
+  }
+  function widthcontenido(){
+    if($(window).width() < 768){
+      $('.contenido').css('width','97%')
+    }else{
+      $('.contenido').css('width','30%')
+    }
   }
   function urlopne(){
     let url = window.location.href.indexOf("#");
@@ -688,6 +2209,11 @@ $(document).ready(function(){
       altotext();
     }
   }
+  $(window).resize(function(){
+    widthcontenido();
+    especiales();
+  });
+  widthcontenido();
   urlopne();
   especiales();
 });
